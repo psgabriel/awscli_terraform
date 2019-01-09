@@ -1,0 +1,18 @@
+version: "3.1"
+
+services: 
+  terraform:
+    build: terraform
+    image: terraform
+    container_name: terraform
+    hostname: terraform
+    env_file: variables.env
+    tty: true
+#
+  aws_cli:
+    build: aws_cli
+    image: aws_cli
+    container_name: aws_cli
+    hostname: aws_cli
+    env_file: variables.env
+    tty: true
